@@ -4,9 +4,9 @@ https://img.shields.io/github/v/release/erikaheidi/yamldocs?sort=semver&style=fo
 egg install script add nginx-stream-module
 
 ---
-##用於 https://github.com/Ym0T/pterodactyl-nginx-egg 的腳本
+用於 https://github.com/Ym0T/pterodactyl-nginx-egg 的腳本
 
-##加載方法：
+加載方法：
 1.進入pterodactyl panel 點擊 Nests
 
 2.進入你的pterodactyl-nginx-egg位置
@@ -29,4 +29,4 @@ rm -rf /mnt/server/gtemp
 6.右下角保存
 
 ---
-##完成
+完成
