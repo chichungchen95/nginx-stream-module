@@ -7,6 +7,7 @@ egg install script add nginx-stream-module
 用於 https://github.com/Ym0T/pterodactyl-nginx-egg 的腳本
 
 加載方法：
+
 1.進入pterodactyl panel 點擊 Nests
 
 2.進入你的pterodactyl-nginx-egg位置
