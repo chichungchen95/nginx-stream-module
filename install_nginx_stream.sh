@@ -1,30 +1,36 @@
 #by chichungchen95 
-echo -e "\033[32;43m[SETUP] ===============目前目錄===============\033[0m"
-ls -l
-echo -e "\033[32;43m[SETUP] 安裝 Nginx Stream 模塊\033[0m"
-apt-get install -qq -y libnginx-mod-stream > /dev/null 2>&1 && echo "\033[32;43m[SETUP] 安裝成功\033[0m" || { echo "\033[32;43m[SETUP] Error: 安裝失敗\033[0m"; exit 1; }
+
+RED='\033[31m'
+GREEN='\033[32m'
+YELLOW='\033[33m'
+BLUE='\033[34m'
+PURPLE='\033[35m'
+CYAN='\033[36m'
+WHITE='\033[37m'
+BLACK='\033[30m'
+WHITE_BG='\033[47m'
+
+echo -e "${GREEN}[SETUP]${WHITE} ${YELLOW}安裝 Nginx Stream 模塊${WHITE}"
+apt-get install -qq -y libnginx-mod-stream > /dev/null 2>&1 && echo "${GREEN}[SETUP]${WHITE} ${YELLOW}安裝成功${WHITE}" || { echo "${GREEN}[SETUP]${WHITE} ${RED}Error: 安裝失敗${WHITE}"; exit 1; }
 mkdir -p /mnt/server/modules
 cp /usr/lib/nginx/modules/ngx_stream_module.so /mnt/server/modules
-echo "\033[32;43m[CHECK] 檢查模塊中...\033[0m"
+echo "${GREEN}[CHECK]${WHITE} ${YELLOW}檢查模塊中...${WHITE}"
 if ! nginx -V 2>&1 | grep -q -- "--with-stream"; then
-    echo "\033[32;43m[CHECK] Error: 無法啟用 Nginx Stream 模塊\033[0m"
+    echo "${GREEN}[CHECK]${WHITE} ${RED}Error: 無法啟用 Nginx Stream 模塊${WHITE}"
     exit 2
 fi
-
-echo -e "\033[32;43m[DONE] 安裝了 Stream 模組的 Nginx 並已成功驗證。\033[0m"
-echo -e "\033[32;43m[INFO] 現在您可以在 Nginx 設定檔中設定 Stream。\033[0m"
-echo -e "\033[31m[chichungchen95] 使用範例\033[0m"
-echo "\033[34m
-load_module /home/container/modules/ngx_stream_module.so;
+echo -e "${GREEN}[DONE]${WHITE} ${YELLOW}安裝了 Stream 模組的 Nginx 並已成功驗證。${WHITE}"
+echo -e "${GREEN}[INFO]${WHITE} ${YELLOW}現在您可以在 Nginx 設定檔中設定 Stream。${WHITE}"
+echo -e "${PURPLE}[chichungchen95]${WHITE} ${YELLOW}使用範例${WHITE}"
+echo "
+${CYAN}load_module /home/container/modules/ngx_stream_module.so;
 stream {
     server {
-        listen 12345;
-        proxy_pass 127.0.0.1:54321;
+        listen 12345; #你的port
+        proxy_pass 127.0.0.1:54321; #他的port
     }
-}
-
-\033[0m"
-echo "\033[32;43m以上為範例可填入nginx/nginx.conf文件內\033[0m"
-echo "\033[32;43m並將文件內的\033[0m \033[34minclude /home/container/modules-enabled/*.conf;\033[0m \033[32;43m前面註記起來如：\033[0m \033[34m# include /home/container/modules-enabled/*.conf;\033[0m"
-echo "\033[32;43mby chichungchen95\033[0m"
+}${WHITE}"
+echo "${GREEN}[說明]${WHITE}以上為範例可填入nginx/nginx.conf文件內${WHITE}"
+echo "${GREEN}[說明]${WHITE}並將文件內的include /home/container/modules-enabled/*.conf; 前面註記起來如：# include /home/container/modules-enabled/*.conf;${WHITE}"
+echo "${WHITE_BG}${RED}script by chichungchen95${WHITE}"
 rm -rf install_nginx_stream.sh
