@@ -16,16 +16,23 @@ egg install script add nginx-stream-module
 
 4.將
 ```echo "[Git] Cloning nginx-stream-module"
-git clone https://github.com/chichungchen95/nginx-stream-module /mnt/server/mtemp > /dev/null 2>&1 && echo "[Git] Repository cloned successfully." || { echo "[Git] Error: nginx-stream-module repository clone failed."; exit 21; }```
-加入至```
+git clone https://github.com/chichungchen95/nginx-stream-module /mnt/server/mtemp > /dev/null 2>&1 && echo "[Git] Repository cloned successfully." || { echo "[Git] Error: nginx-stream-module repository clone failed."; exit 21; }
+```
+加入至
+```
 git clone https://github.com/Ym0T/pterodactyl-nginx-egg /mnt/server/gtemp > /dev/null 2>&1 && echo "[Git] Repository cloned successfully." || { echo "[Git] Error: Default repository clone failed."; exit 21; }
-```下方
+```
+下方
 
-5.將```
+5.將
+```
 chmod +x /mnt/server/install_nginx_stream.sh
 ./install_nginx_stream.sh
-rm -rf /mnt/server/gtemp```
-添加至```rm -rf /mnt/server/gtemp```下方
+rm -rf /mnt/server/gtemp
+```
+添加至
+```rm -rf /mnt/server/gtemp```
+下方
 
 6.右下角保存
 
