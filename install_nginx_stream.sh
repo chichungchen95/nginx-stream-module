@@ -12,7 +12,7 @@ ORANGE='\033[38;5;214m'
 WHITE_BG='\033[47m'
 for i in {15..1}
 do
-    echo -e "倒计时: $i"
+    echo -e "倒數: $i"
     sleep 1  # 每秒减 1
 done
 echo -e "开始执行!"
