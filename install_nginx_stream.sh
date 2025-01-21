@@ -38,7 +38,7 @@ if ! nginx -V 2>&1 | grep -q -- "--with-stream"; then
 fi
 echo -e -e "${GREEN}[DONE]${WHITE} ${YELLOW}安裝了 Stream 模組的 Nginx 並已成功驗證。${WHITE}"
 echo -e -e "${GREEN}[INFO]${WHITE} ${YELLOW}現在您可以在 Nginx 設定檔中設定 Stream。${WHITE}"
-echo -e -e "${PURPLE}[chichungchen95]${WHITE} ${YELLOW}使用範例${WHITE}"
+echo -e -e "${PURPLE}[chichungchen95]${WHITE} ${YELLOW}使用範例 （建議全部複製）${WHITE}"
 echo -e "${WHITE}===================================="
 echo -e "
 ${ORANGE}load_module${RESET} ${BLUE}/home/container/modules/ngx_stream_module.so;${RESET}"
