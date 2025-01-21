@@ -30,7 +30,9 @@ chmod +x /mnt/server/install_nginx_stream.sh
 rm -rf /mnt/server/gtemp
 ```
 加入至以下代碼的下方位置
-```rm -rf /mnt/server/gtemp```
+```
+rm -rf /mnt/server/gtemp
+```
 
 6.右下角保存
 
