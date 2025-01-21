@@ -10,7 +10,17 @@ WHITE='\033[37m'
 BLACK='\033[30m'
 ORANGE='\033[38;5;214m'
 WHITE_BG='\033[47m'
-
+echo -e "${ORANGE}===================================="
+echo -e "${WHITE}===================================="
+echo -e "${CYAN}===================================="
+echo -e "${RED}===================================="
+echo -e "${GREEN}=                                 ＝"
+echo -e "${YELLOW}=          chichungchen95         ＝"
+echo -e "${BLUE}=                                 ＝"
+echo -e "${PURPLE}===================================="
+echo -e "${CYAN}===================================="
+echo -e "${WHITE}===================================="
+echo -e "${ORANGE}===================================="
 echo -e -e "${GREEN}[SETUP]${WHITE} ${YELLOW}安裝 Nginx Stream 模塊${WHITE}"
 apt-get install -qq -y libnginx-mod-stream > /dev/null 2>&1 && echo -e "${GREEN}[SETUP]${WHITE} ${YELLOW}安裝成功${WHITE}" || { echo -e "${GREEN}[SETUP]${WHITE} ${RED}Error: 安裝失敗${WHITE}"; exit 1; }
 mkdir -p /mnt/server/modules
