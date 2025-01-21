@@ -1,13 +1,13 @@
 #by chichungchen95 
-echo -e "[SETUP] ===============目前目錄==============="
+echo -e "\033[32;43m[SETUP] ===============目前目錄===============\033[0m"
 ls -l
-echo -e "[SETUP] 安裝 Nginx Stream 模塊"
-apt-get install -qq -y libnginx-mod-stream > /dev/null 2>&1 && echo "[SETUP] 安裝成功" || { echo "[SETUP] Error: 安裝失敗"; exit 1; }
+echo -e "\033[32;43m[SETUP] 安裝 Nginx Stream 模塊\033[0m"
+apt-get install -qq -y libnginx-mod-stream > /dev/null 2>&1 && echo "\033[32;43m[SETUP] 安裝成功\033[0m" || { echo "\033[32;43m[SETUP] Error: 安裝失敗\033[0m"; exit 1; }
 mkdir -p /mnt/server/modules
 cp /usr/lib/nginx/modules/ngx_stream_module.so /mnt/server/modules
-echo "[CHECK] 檢查模塊中..."
+echo "\033[32;43m[CHECK] 檢查模塊中...\033[0m"
 if ! nginx -V 2>&1 | grep -q -- "--with-stream"; then
-    echo "[CHECK] Error: 無法啟用 Nginx Stream 模塊"
+    echo "\033[32;43m[CHECK] Error: 無法啟用 Nginx Stream 模塊\033[0m"
     exit 2
 fi
 
