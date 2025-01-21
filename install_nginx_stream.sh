@@ -11,7 +11,6 @@ if ! nginx -V 2>&1 | grep -q -- "--with-stream"; then
     exit 2
 fi
 
-./install_nginx_stream.sh
 echo -e "[DONE] 安裝了 Stream 模組的 Nginx 並已成功驗證。"
 echo -e "[INFO] 現在您可以在 Nginx 設定檔中設定 Stream。"
 echo -e "[chichungchen95] 使用範例"
