@@ -2,8 +2,7 @@
 echo -e "[SETUP] ===============目前目錄==============="
 ls -l
 echo -e "[SETUP] 安裝 Nginx Stream 模塊"
-apt-get update -qq > /dev/null 2>&1
-apt-get install -qq -y nginx > /dev/null 2>&1 && echo "[SETUP] 安裝成功" || { echo "[SETUP] Error: 安裝失敗"; exit 1; }
+apt-get install -qq -y libnginx-mod-stream > /dev/null 2>&1 && echo "[SETUP] 安裝成功" || { echo "[SETUP] Error: 安裝失敗"; exit 1; }
 
 echo "[CHECK] 檢查模塊中..."
 if ! nginx -V 2>&1 | grep -q -- "--with-stream"; then
