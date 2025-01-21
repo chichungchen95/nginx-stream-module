@@ -3,7 +3,7 @@
 egg install script add nginx-stream-module
 
 ---
-> 用於 https://github.com/Ym0T/pterodactyl-nginx-egg 的腳本
+> 用於 `https://github.com/Ym0T/pterodactyl-nginx-egg` 的腳本
 
 加載方法：
 
