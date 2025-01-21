@@ -7,8 +7,7 @@ mkdir -p /mnt/server/modules
 
 dpkg -L libnginx-mod-stream | grep .so
 
-
-cp /usr/lib/nginx/modules/stream_module.so /mnt/server/modules
+cp /usr/lib/nginx/modules/ngx_stream_module.so /mnt/server/modules
 echo "[CHECK] 檢查模塊中..."
 if ! nginx -V 2>&1 | grep -q -- "--with-stream"; then
     echo "[CHECK] Error: 無法啟用 Nginx Stream 模塊"
