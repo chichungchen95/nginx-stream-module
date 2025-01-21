@@ -7,8 +7,7 @@ egg install script add nginx-stream-module
 
 加載方法：
 
-1. 進入你的pterodactyl-nginx-egg位置
-![](https://github.com/chichungchen95/-/blob/main/%E6%88%AA%E5%9C%96%202025-01-21%2021.04.23.png?raw=true)
+1. ![進入你的pterodactyl-nginx-egg位置](https://github.com/chichungchen95/-/blob/main/%E6%88%AA%E5%9C%96%202025-01-21%2021.04.23.png?raw=true)
 
 2. 查看上排目錄，有個Install Script點進去
 ![](https://github.com/chichungchen95/-/blob/main/%E6%88%AA%E5%9C%96%202025-01-21%2021.04.45.png?raw=true)
