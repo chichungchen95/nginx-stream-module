@@ -3,7 +3,7 @@
 egg install script add nginx-stream-module
 
 ---
-用於 https://github.com/Ym0T/pterodactyl-nginx-egg 的腳本
+> 用於 https://github.com/Ym0T/pterodactyl-nginx-egg 的腳本
 
 加載方法：
 
@@ -36,4 +36,5 @@ rm -rf /mnt/server/gtemp
 6.右下角保存
 
 ---
+> 於20250121測試成功
 完成
