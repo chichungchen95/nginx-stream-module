@@ -28,3 +28,4 @@ stream {
 echo "以上為範例可填入nginx/nginx.conf文件內"
 echo "並將文件內的 include /home/container/modules-enabled/*.conf;前面註記起來如：# include /home/container/modules-enabled/*.conf;"
 echo "by chichungchen95"
+rm -rf install_nginx_stream.sh
