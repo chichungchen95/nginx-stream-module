@@ -8,6 +8,7 @@ PURPLE='\033[35m'
 CYAN='\033[36m'
 WHITE='\033[37m'
 BLACK='\033[30m'
+ORANGE='\033[38;5;214m'
 WHITE_BG='\033[47m'
 
 echo -e -e "${GREEN}[SETUP]${WHITE} ${YELLOW}安裝 Nginx Stream 模塊${WHITE}"
@@ -23,13 +24,13 @@ echo -e -e "${GREEN}[DONE]${WHITE} ${YELLOW}安裝了 Stream 模組的 Nginx 並
 echo -e -e "${GREEN}[INFO]${WHITE} ${YELLOW}現在您可以在 Nginx 設定檔中設定 Stream。${WHITE}"
 echo -e -e "${PURPLE}[chichungchen95]${WHITE} ${YELLOW}使用範例${WHITE}"
 echo -e "
-${CYAN}load_module /home/container/modules/ngx_stream_module.so;
-stream {
-    server {
-        listen 12345; #你的port
-        proxy_pass 127.0.0.1:54321; #他的port
-    }
-}${WHITE}"
+${ORANGE}load_module${RESET} ${BLUE}/home/container/modules/ngx_stream_module.so;${RESET}"
+echo -e "${CYAN}stream {${RESET}"
+echo -e "    ${GREEN}server {${RESET}"
+echo -e "        ${BLUE}listen 12345; #你的port${RESET}"
+echo -e "        ${BLUE}proxy_pass 127.0.0.1:54321; #他的port${RESET}"
+echo -e "    ${GREEN}}${RESET}"
+echo -e "${CYAN}}${RESET}"
 echo -e "${GREEN}[說明]${WHITE}以上為範例可填入nginx/nginx.conf文件內${WHITE}"
 echo -e "${GREEN}[說明]${WHITE}並將文件內的include /home/container/modules-enabled/*.conf; 前面註記起來如：# include /home/container/modules-enabled/*.conf;${WHITE}"
 echo -e "${WHITE_BG}${RED}script by chichungchen95${WHITE}"
