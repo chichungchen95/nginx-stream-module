@@ -1,4 +1,4 @@
-# nginx-stream-module
+# pterodactyl-nginx-stream-module
 https://img.shields.io/github/v/release/erikaheidi/yamldocs?sort=semver&style=for-the-badge
 
 egg install script add nginx-stream-module
