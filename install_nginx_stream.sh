@@ -48,6 +48,6 @@ echo -e "        ${BLUE}proxy_pass 127.0.0.1:54321; #他的port${RESET}"
 echo -e "    ${GREEN}}${RESET}"
 echo -e "${CYAN}}${RESET}"
 echo -e "${GREEN}[說明]${WHITE}以上為範例可填入nginx/nginx.conf文件內${WHITE}"
-echo -e "${GREEN}[說明]${WHITE}並將文件內的include /home/container/modules-enabled/*.conf; 前面註記起來如：# include /home/container/modules-enabled/*.conf;${WHITE}"
+echo -e "${RED}[重要說明]${WHITE}並將文件內的include /home/container/modules-enabled/*.conf; 前面註記起來如：# include /home/container/modules-enabled/*.conf;${WHITE}"
 echo -e "${WHITE_BG}${RED}script by chichungchen95${WHITE}"
 rm -rf install_nginx_stream.sh
